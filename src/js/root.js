@@ -11,9 +11,9 @@
  * by some modules), we are listing it explicitly to get the reference to the 'ko'
  * object in the callback
  */
-require(['ojs/ojbootstrap', 'ojs/ojcontext', 'knockout', 'ojs/ojmodel', 'MockRestServer', 'ojs/ojpagingdataproviderview', 'ojs/ojcollectiondataprovider', 
-  'text!./departments.json','./jquery.mockjax', 'ojs/ojknockout','ojs/ojtable','ojs/ojpagingcontrol'],
-  function (Bootstrap, Context, ko, ModelClass, MockRESTServer, PagingDataProviderView, CollectionDataProvider,jsonDataStr) {
+require(['ojs/ojbootstrap', 'ojs/ojcontext', 'knockout', 'ojs/ojmodel', 'MockRestServer', 'ojs/ojpagingdataproviderview', 'ojs/ojcollectiondataprovider',
+  'text!./departments.json', './jquery.mockjax', 'ojs/ojknockout', 'ojs/ojtable', 'ojs/ojpagingcontrol', 'ojs/ojbutton'],
+  function (Bootstrap, Context, ko, ModelClass, MockRESTServer, PagingDataProviderView, CollectionDataProvider, jsonDataStr) {
     Bootstrap.whenDocumentReady().then(
       function () {
         var self;
@@ -44,7 +44,11 @@ require(['ojs/ojbootstrap', 'ojs/ojcontext', 'knockout', 'ojs/ojmodel', 'MockRes
             });
 
             self.pagingDataProvider = new PagingDataProviderView(new CollectionDataProvider(self.collection));
-            self.columns=[{"field":"DepartmentId","headerText":"Department ID"},{"field":"DepartmentName","headerText":"Department Name"},{"field":"ManagerId","headerText":"Manager ID"},{"field":"LocationId","headerText":"Location ID"}];
+            self.columns = [{ "field": "DepartmentId", "headerText": "Department ID" },
+            { "field": "DepartmentName", "headerText": "Department Name" },
+            { "field": "ManagerId", "headerText": "Manager ID" },
+            { "field": "LocationId", "headerText": "Location ID" },
+            { "template": "deleteRow", "headerText": "" }];
           }
 
           parseDept(response) {
