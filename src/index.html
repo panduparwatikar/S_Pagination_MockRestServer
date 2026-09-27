@@ -44,8 +44,8 @@
   <!-- injector:scripts -->
   <!-- endinjector -->
   <div class="oj-flex oj-sm-flex-direction-column">
-    <oj-toolbar class="oj-flex-item">
-      <oj-button on-oj-action="[[addRow]]">Add Row</oj-button>
+    <oj-toolbar class="oj-flex-item" style="padding:2em;">
+      <oj-button chroming="callToAction" style="margin-left:auto;" on-oj-action="[[addRow]]">Add Row</oj-button>
     </oj-toolbar>
     <oj-table class="oj-flex-item" columns="[[columns]]" data="[[pagingDataProvider]]">
       <template slot="deleteRow">
