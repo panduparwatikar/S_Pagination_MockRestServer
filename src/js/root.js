@@ -77,9 +77,8 @@ require(['ojs/ojbootstrap', 'ojs/ojcontext', 'knockout', 'ojs/ojmodel', 'MockRes
             "LocationId": 999
           });
 
-          let currPageNum=$(".oj-table")[0].data.getPage();
           let startItemIndex=$(".oj-table")[0].data.getStartItemIndex();
-          $(".oj-table")[0].data.dataProvider.collection.add(newModel,{at:startItemIndex});
+          $(".oj-table")[0].data.dataProvider.collection.add(newModel,{silent:true,at:startItemIndex});
         }
 
         // release the application bootstrap busy state
