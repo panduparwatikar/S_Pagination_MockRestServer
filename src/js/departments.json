@@ -3,44 +3,44 @@
       {
         "DepartmentId": 10,
         "DepartmentName": "Administration",
-        "ManagerId": null,
-        "LocationId": null
+        "ManagerId": 123,
+        "LocationId": 456
       },
       {
         "DepartmentId": 20,
         "DepartmentName": "Marketing",
-        "ManagerId": null,
-        "LocationId": null
+        "ManagerId": 789,
+        "LocationId": 27687
       },
       {
         "DepartmentId": 30,
         "DepartmentName": "Transportation",
-        "ManagerId": null,
-        "LocationId": null
+        "ManagerId": 8768,
+        "LocationId": 98798
       },
       {
         "DepartmentId": 40,
         "DepartmentName": "Shipping",
-        "ManagerId": null,
-        "LocationId": null
+        "ManagerId": 97687,
+        "LocationId": 865865
       },
       {
         "DepartmentId": 50,
         "DepartmentName": "Human Resources",
-        "ManagerId": null,
-        "LocationId": null
+        "ManagerId": 434,
+        "LocationId": 7098
       },
       {
         "DepartmentId": 60,
         "DepartmentName": "Operations",
-        "ManagerId": null,
-        "LocationId": null
+        "ManagerId": 7878,
+        "LocationId": 938
       },
       {
         "DepartmentId": 70,
         "DepartmentName": "Inventory",
-        "ManagerId": null,
-        "LocationId": null
+        "ManagerId": 768767,
+        "LocationId": 3645635
       },
       {
         "DepartmentId": 80,
@@ -51,14 +51,14 @@
       {
         "DepartmentId": 100,
         "DepartmentName": "Finance",
-        "ManagerId": null,
-        "LocationId": null
+        "ManagerId": 98989,
+        "LocationId": 4334
       },
       {
         "DepartmentId": 110,
         "DepartmentName": "Documentation",
-        "ManagerId": null,
-        "LocationId": null
+        "ManagerId": 98098,
+        "LocationId": 8687
       },
       {
         "DepartmentId": 130,

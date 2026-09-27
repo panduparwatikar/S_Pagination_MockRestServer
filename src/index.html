@@ -23,31 +23,39 @@
   section to represent the appropriate content type.
   ***************************** IMPORTANT INFORMATION ************************************ -->
 <html lang="en-us">
-  <head>
-    <title>OJET_Pagination</title>
-    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="viewport-fit=cover, initial-scale=1.0"/>
-    <link rel="icon" type="image/x-icon" href="css/images/JET-Favicon-Red-32x32.png">
-    <link rel="apple-touch-icon-precomposed" href="css/images/touchicon.png">
-    <meta name="apple-mobile-web-app-title" content="Oracle JET">
-    <link rel="stylesheet" href="https://static.oracle.com/cdn/fnd/gallery/2701.0.2/images/iconfont/ojuxIconFont.min.css">
-    <link rel="stylesheet" href="https://static.oracle.com/cdn/fnd/gallery/2701.0.2/OracleFont/OracleFont.min.css">
-		<!-- injector:theme -->
-		<!-- endinjector -->
 
-  </head>
-  <body>
-    <!-- This injects script tags for the main javascript files -->
-		<!-- injector:scripts -->
-		<!-- endinjector -->
-    <oj-table columns="[[columns]]" data="[[pagingDataProvider]]">
+<head>
+  <title>OJET_Pagination</title>
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="viewport-fit=cover, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="css/images/JET-Favicon-Red-32x32.png">
+  <link rel="apple-touch-icon-precomposed" href="css/images/touchicon.png">
+  <meta name="apple-mobile-web-app-title" content="Oracle JET">
+  <link rel="stylesheet" href="https://static.oracle.com/cdn/fnd/gallery/2701.0.2/images/iconfont/ojuxIconFont.min.css">
+  <link rel="stylesheet" href="https://static.oracle.com/cdn/fnd/gallery/2701.0.2/OracleFont/OracleFont.min.css">
+  <!-- injector:theme -->
+  <!-- endinjector -->
+
+</head>
+
+<body>
+  <!-- This injects script tags for the main javascript files -->
+  <!-- injector:scripts -->
+  <!-- endinjector -->
+  <div class="oj-flex oj-sm-flex-direction-column">
+    <oj-toolbar class="oj-flex-item">
+      <oj-button on-oj-action="[[addRow]]">Add Row</oj-button>
+    </oj-toolbar>
+    <oj-table class="oj-flex-item" columns="[[columns]]" data="[[pagingDataProvider]]">
       <template slot="deleteRow">
-        <oj-button display="icons" chroming="borderless">
+        <oj-button display="icons" chroming="borderless" on-oj-action="[[()=>deleteRow($current)]]">
           <span class="oj-ux-ico-trash"></span>
         </oj-button>
       </template>
       <oj-paging-control data="[[pagingDataProvider]]" page-size="3" slot="bottom"></oj-paging-control>
     </oj-table>
-  </body>
+  </div>
+</body>
+
 </html>
